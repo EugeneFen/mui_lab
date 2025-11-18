@@ -1,0 +1,32 @@
+ <!doctype html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/static/style.css" />
+    <title>Отели</title>
+</head>
+<body>
+    </section>
+     <section id="content">
+        <h4>Отели</h4>
+        <table class="hotels-table">
+            <thead>
+                <tr>
+                    {% for item in hotel_head %}
+                        <th>{{ item }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in hotel_body %}
+                    <tr>
+                        {% for item in row %}
+                            <td>{{ item }}</td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+</body>
+</html>
+
